@@ -5,8 +5,9 @@ page_index= function(){
       input$updatemenu
     )
   ) -> plt3
-  plt3
+  plt3 |> htmlwidgets::onRender("function(e){
+    widget=e}
+    ")
 
-  plt3 |> plotBox(input=input) |> ui() |>
-    attachAppDep()
+  plt3 |> plotBox(input=input) |> ui() |> attachAppDep()
 }
