@@ -11,7 +11,7 @@ ui = function(body=NULL){
   dashboardPage(
     header = dashboardHeader(
       title = dashboardBrand(
-        title = "My dashboard",
+        title = "Smart Election",
         color = "primary",
         href = "https://adminlte.io/themes/v3",
         image = "https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png"
@@ -71,8 +71,8 @@ dropdown  <- function(id="dropdown"){
         tags$a(class = "dropdown-item",
           href = "#",
           "2020")))) -> tag_element
-  
-  tag_element 
+
+  tag_element
 }
 dropdownMenuTag=function(){
   require(htmltools)
@@ -94,14 +94,14 @@ dropdownMenuTag=function(){
         tags$a(class = "dropdown-item",
           href = "#",
           "2020")))) -> tag_element
-  
-  tag_element 
+
+  tag_element
 }
 
 mainpage = function(p){
-  simple_bs4_theme <- 
+  simple_bs4_theme <-
     bslib::bs_theme(version = 4)
-  
+
   require(htmltools)
   mainpage=
     shiny::fluidPage(
@@ -118,7 +118,7 @@ mainpage = function(p){
               style="position:absolute;top:48px;left:91px",
               dropdownMenuTag()
             )
-          ) 
+          )
         )
       )
     )
@@ -132,10 +132,10 @@ pltWithUpdateMenus = function(plt){
         type="buttons",
         buttons=list(
           button2012,
-          button2016, 
+          button2016,
           button2020
         )
       )
     )
-  ) 
+  )
 }

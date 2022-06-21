@@ -4,10 +4,17 @@ page_index= function(){
     updatemenus=list(
       input$updatemenu
     )
-  ) -> plt3
+  ) |>
+    plotly::config(
+      displayModeBar=F
+    )-> plt3
   plt3 |> htmlwidgets::onRender("function(e){
     widget=e}
     ")
 
   plt3 |> plotBox(input=input) |> ui() |> attachAppDep()
+}
+pwa_index = function(){
+  require(htmltools)
+  page_index() |> pwa$index()
 }
