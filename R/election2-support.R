@@ -13,8 +13,8 @@ ui = function(body=NULL){
       title = dashboardBrand(
         title = "Smart Election",
         color = "primary",
-        href = "https://adminlte.io/themes/v3",
-        image = "https://adminlte.io/themes/v3/dist/img/AdminLTELogo.png"
+        href = "https://github.com/tpemartin",
+        image = "https://tpemartin.github.io/appElection/icons/emajor.png"
       )
     ),
     sidebar = dashboardSidebar(),
